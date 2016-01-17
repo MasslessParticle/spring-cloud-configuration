@@ -11,16 +11,3 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
-
-#Much of this should be encrypted
-security:
-  user:
-    password: password
-  oauth2:
-    client:
-      accessTokenUri: http://localhost:9999/uaa/oauth/token
-      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
-      clientId: acme
-      clientSecret: acmesecret
-    resource:
-      userInfoUri: http://localhost:9999/uaa/user
